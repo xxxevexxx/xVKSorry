@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "vkontakte-multi-vksorry"
+version = "0.1.0"
+description = ""
+authors = ["xxxevexxx <dl6l6l6lb@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.95.1"
+uvicorn = "^0.21.1"
+loguru = "^0.7.0"
+tortoise-orm = "^0.19.3"
+aiomysql = "^0.2.0"
+aerich = "^0.7.2"
+cryptography = "^42.0.1"
+vkbottle = "^4.3.12"
+docstring-parser = "^0.15"
+load-dotenv = "^0.1.0"
+psutil = "^5.9.8"
+pyjwt = "^2.8.0"
+
+[tool.poetry.dev-dependencies]
+
+
+[tool.aerich]
+tortoise_orm = "config.TORTOISE_ORM"
+location = "./migrations"
+src_folder = "./."
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
