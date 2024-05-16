@@ -47,14 +47,10 @@ async def views_get_accounts(request: Request, owner_id: int, limit: int):
         else:
             response_accounts.append(dict(user_id=account.user, username=account.nick, prefixes=prefixes, state=True, lock=False))
     while len(response_accounts) < 3:
-        print(limit)
         if len(response_accounts) >= limit:
-            print("limit")
             response_accounts.append(dict(user_id=0, username="", prefixes=dict(commands="", scripts="", repeats=""), state=False, lock=True))
         else:
-            print("unlimit")
             response_accounts.append(dict(user_id=0, username="", prefixes=dict(commands="", scripts="", repeats=""), state=False, lock=False))
-    print(response_accounts)
     return response_accounts
 
 
